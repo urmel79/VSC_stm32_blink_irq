@@ -4,7 +4,8 @@ from machine import Pin
 import pyb, micropython
 micropython.alloc_emergency_exception_buf(100)
 
-tim = pyb.Timer(2, freq=2)
+# using timer 2 at 4 Hz
+tim = pyb.Timer(2, freq=4)
 
 # get GPIOs via 'help(machine.Pin.board)' on python repl
 # Nucleo144 F767ZI:
